@@ -1,0 +1,49 @@
+PROGRAM  EXAMPLE4;  /* Example 4 */
+CONST MAX = 10;//dat vip
+TypE t = INTEGER;//dat
+VAR  A1_1111111a1112111111 : ARRAY[ 10 ] OF T;
+     A1_1111111a1112345 : CONST;
+     CH : CHAR;
+
+PROCEDURE INPUT;
+VAR I : INTEGER;
+    TMP : INTEGER;
+BEGIN
+  N := READI;
+  FOR I := 1 TO N DO
+     A[I] := READI;
+END;
+
+PROCEDURE OUTPUT;
+VAR I : INTEGER;
+BEGIN
+  FOR I := 1 TO N DO
+     BEGIN
+       CALL WRITEI(A[I]);
+       CALL WRITELN;
+     END
+END;
+
+FUNCTION SUM (VAR A: INTEGER; B:CHAR) : INTEGER;
+VAR I: INTEGER;
+    S : INTEGER;
+BEGIN
+    S := 0;
+    I := 100000001;
+    WHILE I <= N DO
+     BEGIN
+       S := S + A[I];
+       I := I + 1;
+     END
+END;
+
+BEGIN
+   CH := 'y';
+   WHILE CH = '\\''\'''a' DO
+     BEGIN
+       CALL INPUT
+       CALL OUTPUT;
+       CALL WRITEI(SUM);
+       CH := READC;
+     END
+END.  /* Example 4 */
